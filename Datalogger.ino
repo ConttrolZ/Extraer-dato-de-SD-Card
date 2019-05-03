@@ -6,7 +6,6 @@
 #include <SPI.h>
 #include <SD.h>
 
-unsigned long inicioTiempo;
 String lectura;
 char caracter;
 int  cont;
@@ -79,7 +78,7 @@ void setup() {
               }
             }
             
-              for ( int k=0; k<11 ; k++){ // Se hacen las mediciones con el sensor
+              for ( int k=0; k<11 ; k++){ // Se hacen las mediciones con el sensor.
               float sensor = analogRead(A0)*5.0/1024;
                 cont++;
                 archivo = SD.open("datalog.txt",FILE_WRITE);
